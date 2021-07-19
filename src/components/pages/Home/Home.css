@@ -151,6 +151,12 @@ table {
   }
 }
 
+@media screen and (min-width: 1100px) {
+  .btn-grad {
+    left: 540px;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .btn-grad {
     left: 610px;
@@ -185,6 +191,13 @@ table {
   .downArrow {
     top: 400px;
     left: 640px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .downArrow {
+    left: 630px;
+    top: 370px;
   }
 }
 
@@ -260,6 +273,14 @@ table {
    }
  }
 
+ @media screen and (min-width: 1100px) {
+   .header {
+     height: 50vh;
+   }
+ }
+
+
+
  .perfect {
    font-size: 50px;
    width: 100%;
@@ -272,6 +293,14 @@ table {
  @media screen and (min-width: 1366px) {
    .perfect {
      font-size: 28px;
+   }
+ }
+
+ @media screen and (min-width: 1100px) {
+   .perfect {
+     font-size: 45px;
+     line-height: 1.2;
+     padding-top: 30px
    }
  }
 
@@ -326,6 +355,12 @@ table {
   @media screen and (max-width: 1370px) {
     .card {
       left: 40px;
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    .card {
+      left: 25px;
     }
   }
 
