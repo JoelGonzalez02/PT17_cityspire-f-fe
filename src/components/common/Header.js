@@ -3,7 +3,7 @@ import { useOktaAuth } from '@okta/okta-react';
 import { useHistory } from 'react-router-dom';
 import { SearchForm } from '../common';
 import cityspireLogo from '../../assets/imgs/logo.png';
-import { fetchSavedCity } from '../../state/actions';
+// import { fetchSavedCity } from '../../state/actions';
 import {
   Row,
   Col,
@@ -16,7 +16,7 @@ import {
   Divider,
 } from 'antd';
 import { UserOutlined, DownOutlined } from '@ant-design/icons';
-import { accessToken } from 'mapbox-gl/dist/mapbox-gl-csp';
+// import { accessToken } from 'mapbox-gl/dist/mapbox-gl-csp';
 const { Content } = Layout;
 const HeaderStyle = {
   display: 'flex',
@@ -29,7 +29,7 @@ const HeaderStyle = {
 
 const Header = () => {
   const { authService } = useOktaAuth();
-  const { oktaAuth, authState } = useOktaAuth();
+  const { authState } = useOktaAuth();
   const [userInfo, setUserInfo] = useState(null);
   // eslint-disable-next-line
   const [memoAuthService] = useMemo(() => [authService], []);
@@ -129,7 +129,11 @@ const Header = () => {
                 {userInfo ? (
                   userInfo.name
                 ) : (
-                  <a className="login" onClick={e => e.preventDefault()}>
+                  <a
+                    className="login"
+                    href="none"
+                    onClick={e => e.preventDefault()}
+                  >
                     Login
                   </a>
                 )}

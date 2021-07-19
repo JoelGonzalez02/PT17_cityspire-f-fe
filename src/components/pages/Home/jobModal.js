@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
@@ -17,22 +17,22 @@ function getModalStyle() {
   };
 }
 
-const useStyles = makeStyles(theme => ({
-  paper: {
-    allignItems: 'center',
-    justifyItems: 'center',
-    width: '430px',
-    position: 'absolute',
-    backgroundColor: 'lightgrey',
-    border: '2px solid #000',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-    borderRadius: '20px',
-  },
-}));
+// const useStyles = makeStyles(theme => ({
+//   paper: {
+//     allignItems: 'center',
+//     justifyItems: 'center',
+//     width: '430px',
+//     position: 'absolute',
+//     backgroundColor: 'lightgrey',
+//     border: '2px solid #000',
+//     left: '50%',
+//     top: '50%',
+//     transform: 'translate(-50%, -50%)',
+//     boxShadow: theme.shadows[5],
+//     padding: theme.spacing(2, 4, 3),
+//     borderRadius: '20px',
+//   },
+// }));
 
 function JobModal() {
   const [jobCities, setJobCities] = useState([]);
@@ -49,7 +49,6 @@ function JobModal() {
       });
   }, []);
 
-  const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
 
@@ -88,6 +87,7 @@ function JobModal() {
           return (
             <div key={index}>
               <a
+                href="none"
                 className="modalText"
                 onClick={() => setCityAndState(city.city)}
               >
